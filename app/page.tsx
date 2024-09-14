@@ -57,11 +57,11 @@ export default function Home() {
     console.log(parts);
 
     return {
-      arab: parts[1] || "",
-      indonesia: parts[2] || "",
-      penulis: parts[3] || "",
-      penjelasan: parts[5] || "",
-      saran: parts[7] || "",
+      arab: parts[0] || "",
+      indonesia: parts[1] || "",
+      penulis: parts[2] || "",
+      penjelasan: parts[4] || "",
+      saran: parts[6] || "",
     };
   };
 
