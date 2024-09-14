@@ -54,12 +54,14 @@ export default function Home() {
       .map((part) => part.trim())
       .filter((part) => part.length > 0);
 
+    console.log(parts);
+
     return {
-      arab: parts[2] || "",
-      indonesia: parts[4] || "",
-      penulis: parts[6] || "",
-      penjelasan: parts[8] || "",
-      saran: parts[10] || "",
+      arab: parts[1] || "",
+      indonesia: parts[2] || "",
+      penulis: parts[3] || "",
+      penjelasan: parts[5] || "",
+      saran: parts[7] || "",
     };
   };
 
@@ -67,10 +69,9 @@ export default function Home() {
     setLoading(true);
     setError("");
     try {
-      const result = await chatSession.sendMessage(
-        `Tolong berikan aku hadits shahih dari salah satu 9 orang HR. Abu Daud, HR. Ahmad, HR. Bukhari, HR. Darimi, HR. Ibnu Majah, HR. Malik, HR. Muslim, HR. Nasai, HR. Tirmidzi yang sesuai dan relevan dengan mood ${mood} dalam bahasa arab dan indonesianya beserta dengan penulis dan nomor haditsnya. Jawab dalam struktur seperti ini arab, arti, penulis dan nomor haditsnya, penjelasan, dan saran. 
+      const prompt = `Tolong berikan aku hadits shahih dari salah satu 9 orang HR. Abu Daud, HR. Ahmad, HR. Bukhari, HR. Darimi, HR. Ibnu Majah, HR. Malik, HR. Muslim, HR. Nasai, HR. Tirmidzi yang sesuai dan relevan dengan mood ${mood}. Sesuaikan strukturnya seperti ini arab, indonesia, penulis beserta nomor haditsnya, penjelasan, dan saran.
 
-        Contoh: 
+        Berikut contoh respons yang aku inginkan:
 
         "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ قَالَ أَخْبَرَنَا مَالِكٌ عَنْ يَحْيَى بْنِ سَعِيدٍ عَنْ مُحَمَّدِ بْنِ إِبْرَاهِيمَ عَنْ عَلْقَمَةَ بْنِ وَقَّاصٍ عَنْ عُمَرَأَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ الْأَعْمَالُ بِالنِّيَّةِ وَلِكُلِّ امْرِئٍ مَا نَوَى فَمَنْ كَانَتْ هِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ فَهِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ وَمَنْ كَانَتْ هِجْرَتُهُ لدُنْيَا يُصِيبُهَا أَوْ امْرَأَةٍ يَتَزَوَّجُهَا فَهِجْرَتُهُ إِلَى مَا هَاجَرَ إِلَيْهِ"
 
@@ -78,13 +79,13 @@ export default function Home() {
 
         HR. Bukhari No. 52
 
-      (Penjelasan tentang hadits disini)
-      
-      (saran tentang hadits disini)
-        
-        
-        Bersihkan hasilnya dari simbol-simbol mengganggu seperti * dan > dalam responsenya. Hilangkan keterangan dalam responsenya. Tetap tampilkan penjelasan dan sarannya`
-      );
+        (Penjelasan tentang hadits disini)
+
+        (saran tentang hadits disini)
+
+        Hilangkan simbol-simbol seperti * dan > serta keterangan dalam responsenya.`;
+
+      const result = await chatSession.sendMessage(prompt);
       const responseText = result?.response.text();
 
       if (responseText) {
@@ -112,7 +113,7 @@ export default function Home() {
           particleColor="#ddd"
         />
       </div>
-      <main className="w-full">
+      <main>
         {loading ? (
           <TextGenerateEffect
             words={"Mencarikan hadits..."}
@@ -168,10 +169,10 @@ export default function Home() {
               ))}
             </div>
             <footer className="mt-32 absolute flex flex-col md:flex-row gap-4 items-center justify-center left-1/2 transform -translate-x-1/2 w-full">
-              <span className="font-extralight text-xs animate-fadeInUp">
+              <span className="font-extralight text-xs animate-fadeIn">
                 Dibuat oleh Arisandi Satria Jeujanan
               </span>
-              <div className="flex space-x-2 animate-fadeInUp">
+              <div className="flex space-x-2 animate-fadeIn">
                 {socmed.map((item: any) => (
                   <Link
                     href={item.route}
