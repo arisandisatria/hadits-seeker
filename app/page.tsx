@@ -57,11 +57,11 @@ export default function Home() {
     console.log(parts);
 
     return {
-      arab: parts[0] || "",
-      indonesia: parts[1] || "",
-      penulis: parts[2] || "",
-      penjelasan: parts[4] || "",
-      saran: parts[6] || "",
+      arab: parts[2] || "",
+      indonesia: parts[4] || "",
+      penulis: parts[6] || "",
+      penjelasan: parts[8] || "",
+      saran: parts[10] || "",
     };
   };
 
@@ -69,21 +69,29 @@ export default function Home() {
     setLoading(true);
     setError("");
     try {
-      const prompt = `Tolong berikan aku hadits shahih dari salah satu 9 orang HR. Abu Daud, HR. Ahmad, HR. Bukhari, HR. Darimi, HR. Ibnu Majah, HR. Malik, HR. Muslim, HR. Nasai, HR. Tirmidzi yang sesuai dan relevan dengan mood ${mood}. Sesuaikan strukturnya seperti ini arab, indonesia, penulis beserta nomor haditsnya, penjelasan, dan saran.
+      const prompt = `Berikan hadits shahih dari salah satu perawi berikut: Abu Daud, Ahmad, Bukhari, Darimi, Ibnu Majah, Malik, Muslim, Nasai, atau Tirmidzi, yang sesuai dengan mood "${mood}". Strukturkan hasilnya dengan format berikut:
 
-        Berikut contoh respons yang aku inginkan:
+Bahasa Arab: Teks hadits dalam bahasa Arab.
+Terjemahan Indonesia: Terjemahan hadits ke dalam Bahasa Indonesia.
+Perawi & Nomor Hadits: Sumber hadits beserta nomor haditsnya (contoh: HR. Bukhari No. 52).
+Penjelasan: Penjelasan singkat tentang makna atau konteks hadits.
+Saran: Saran yang diberikan harus berupa paragraf, bukan dalam bentuk daftar atau list.
+Contoh:
 
-        "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ قَالَ أَخْبَرَنَا مَالِكٌ عَنْ يَحْيَى بْنِ سَعِيدٍ عَنْ مُحَمَّدِ بْنِ إِبْرَاهِيمَ عَنْ عَلْقَمَةَ بْنِ وَقَّاصٍ عَنْ عُمَرَأَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ الْأَعْمَالُ بِالنِّيَّةِ وَلِكُلِّ امْرِئٍ مَا نَوَى فَمَنْ كَانَتْ هِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ فَهِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ وَمَنْ كَانَتْ هِجْرَتُهُ لدُنْيَا يُصِيبُهَا أَوْ امْرَأَةٍ يَتَزَوَّجُهَا فَهِجْرَتُهُ إِلَى مَا هَاجَرَ إِلَيْهِ"
+Bahasa Arab:
+حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ قَالَ أَخْبَرَنَا مَالِكٌ عَنْ يَحْيَى بْنِ سَعِيدٍ عَنْ مُحَمَّدِ بْنِ إِبْرَاهِيمَ عَنْ عَلْقَمَةَ بْنِ وَقَّاصٍ عَنْ عُمَرَ
 
-        "Telah menceritakan kepada kami [Abdullah bin Maslamah] berkata, telah mengabarkan kepada kami [Malik] dari [Yahya bin Sa'id] dari [Muhammad bin Ibrahim] dari [Alqamah bin Waqash] dari [Umar], bahwa Rasulullah shallallahu 'alaihi wasallam bersabda: "Semua perbuatan tergantung niatnya, dan (balasan) bagi tiap-tiap orang (tergantung) apa yang diniatkan; barangsiapa niat hijrahnya karena Allah dan Rasul-Nya, maka hijrahnya adalah kepada Allah dan Rasul-Nya. Barangsiapa niat hijrahnya karena dunia yang ingin digapainya atau karena seorang perempuan yang ingin dinikahinya, maka hijrahnya adalah kepada apa dia diniatkan.". "
+Terjemahan Indonesia:
+Telah menceritakan kepada kami [Abdullah bin Maslamah] berkata, telah mengabarkan kepada kami [Malik] dari [Yahya bin Sa'id] dari [Muhammad bin Ibrahim] dari [Alqamah bin Waqash] dari [Umar], bahwa Rasulullah shallallahu 'alaihi wasallam bersabda: "Semua perbuatan tergantung niatnya..."
 
-        HR. Bukhari No. 52
+Perawi & Nomor Hadits:
+HR. Bukhari No. 52
 
-        (Penjelasan tentang hadits disini)
+Penjelasan:
+Hadits ini menunjukkan pentingnya niat dalam setiap amal perbuatan.
 
-        (saran tentang hadits disini)
-
-        Hilangkan simbol-simbol seperti * dan > serta keterangan dalam responsenya.`;
+Saran:
+Dalam menghadapi setiap situasi, niat yang baik harus menjadi landasan utama. Pastikan selalu niatkan semua tindakan kita untuk kebaikan dan demi meraih ridha Allah. Hindari niat yang bersifat duniawi semata, karena niat menentukan hasil di akhirat.`;
 
       const result = await chatSession.sendMessage(prompt);
       const responseText = result?.response.text();
