@@ -6,6 +6,8 @@ export const moods = [
   "🥰 cinta",
   "😡 marah",
   "😟 cemas",
+  "😊 tenang",
+  "😖 gelisah",
 ];
 
 export const socmed = [

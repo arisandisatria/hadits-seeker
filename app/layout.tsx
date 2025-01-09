@@ -36,7 +36,7 @@ export default function RootLayout({
         {/* <link rel="icon" type="image/png" href="/favicon.png" /> */}
       </head>
       <body
-        className={`${outfit.className} antialiased dark text-white h-full scrollbar`}
+        className={`${outfit.className} antialiased dark text-white scrollbar`}
       >
         {children}
       </body>

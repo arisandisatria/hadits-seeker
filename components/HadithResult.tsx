@@ -1,6 +1,5 @@
 import React from "react";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
-import Image from "next/image";
 import { TelegramShare, WhatsappShare } from "react-share-kit";
 
 interface HadithResponse {
@@ -8,7 +7,6 @@ interface HadithResponse {
   indonesia: string;
   penulis: string;
   penjelasan: string;
-  saran: string;
 }
 
 interface HadithResultProps {
@@ -18,15 +16,16 @@ interface HadithResultProps {
 
 const HadithResult: React.FC<HadithResultProps> = ({ hadith, setHadith }) => {
   return (
-    <div className="max-w-4xl my-8 flex flex-col justify-center items-center space-y-8">
+    <div className="max-w-4xl py-10 px-8 flex flex-col justify-center items-center space-y-8">
       <div className="flex flex-col space-y-4">
         <p className="text-4xl md:text-6xl">{hadith?.arab}</p>
         <p className="text-base md:text-xl">{hadith?.indonesia}</p>
-        <p className="text-sm md:text-lg font-extralight">{hadith?.penulis}</p>
+        <p className="text-sm underline underline-offset-4 md:text-lg font-extralight">
+          {hadith?.penulis}
+        </p>
       </div>
       <div className="flex flex-col space-y-4">
         <p className="font-light text-base md:text-lg">{hadith?.penjelasan}</p>
-        <p className="font-light text-base md:text-lg">{hadith?.saran}</p>
       </div>
 
       <div className="flex gap-20 items-center">

@@ -11,14 +11,14 @@ interface ChooseMoodProps {
 
 const ChooseMood: React.FC<ChooseMoodProps> = ({ getHadithByMood }) => {
   return (
-    <>
+    <div>
       <TextGenerateEffect
         duration={1}
         filter={false}
         words={"Cari hadits sesuai dengan mood kamu!"}
         className="text-white uppercase text-xl md:text-3xl"
       />
-      <div className="flex flex-wrap justify-center gap-2 mt-8 animate-fadeInUp max-w-5xl">
+      <div className="flex flex-wrap justify-center gap-2 mt-8 animate-fadeInUp max-w-xl">
         {moods.map((mood: string) => (
           <HoverBorderGradient
             key={mood}
@@ -43,7 +43,7 @@ const ChooseMood: React.FC<ChooseMoodProps> = ({ getHadithByMood }) => {
           ))}
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 
