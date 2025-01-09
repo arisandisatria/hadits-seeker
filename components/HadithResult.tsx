@@ -20,7 +20,7 @@ const HadithResult: React.FC<HadithResultProps> = ({ hadith, setHadith }) => {
       <div className="flex flex-col space-y-4">
         <p className="text-4xl md:text-6xl">{hadith?.arab}</p>
         <p className="text-base md:text-xl">{hadith?.indonesia}</p>
-        <p className="text-sm underline underline-offset-4 md:text-lg font-extralight">
+        <p className="text-sm underline-offset-4 md:text-lg font-extralight">
           {hadith?.penulis}
         </p>
       </div>
