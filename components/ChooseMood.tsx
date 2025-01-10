@@ -42,6 +42,11 @@ const ChooseMood: React.FC<ChooseMoodProps> = ({ getHadithByMood }) => {
             </Link>
           ))}
         </div>
+        <span className="font-bold underline text-red-400 text-xs animate-fadeIn">
+          <Link href={"https://trakteer.id/vwzqvlcdqwifimumjq0o/tip"}>
+            Traktir saya disini
+          </Link>
+        </span>
       </footer>
     </div>
   );

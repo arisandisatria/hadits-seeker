@@ -17,13 +17,13 @@ export const socmed = [
     route: "https://www.instagram.com/arisandi_satria",
   },
   {
-    logo: "/github-logo.png",
-    alt: "Github",
-    route: "https://github.com/arisandisatria",
-  },
-  {
     logo: "/business.png",
     alt: "Linkedin",
     route: "https://www.linkedin.com/in/arisandisatriajeujanan/",
+  },
+  {
+    logo: "/github-logo.png",
+    alt: "Github",
+    route: "https://github.com/arisandisatria",
   },
 ];
