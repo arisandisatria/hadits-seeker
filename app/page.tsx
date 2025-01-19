@@ -58,32 +58,8 @@ export default function Home() {
   };
 
   return (
-    <main className="relative flex justify-center items-center text-center h-screen">
-      {/* {showAuthForm && (
-        <div
-          onClick={() => setShowAuthForm(false)}
-          className="absolute inset-0 z-20 bg-black bg-opacity-60"
-        />
-      )}
-
-      <div
-        className={`absolute ${
-          showAuthForm == false ? "hidden" : "block"
-        } z-20`}
-      >
-        <LoginForm />
-      </div>
-      <div className="absolute top-10 right-40">
-        <HoverBorderGradient
-          onClick={() => setShowAuthForm(true)}
-          containerClassName="rounded-full"
-          as="button"
-          className="dark:bg-black bg-white text-black dark:text-white flex items-center capitalize space-x-2"
-        >
-          <span>Login</span>
-        </HoverBorderGradient>
-      </div> */}
-      <div className="-z-20 w-full absolute inset-0 h-screen">
+    <main className="flex justify-center items-center text-center min-h-screen">
+      <div className="-z-20 w-full absolute inset-0 h-full">
         <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"

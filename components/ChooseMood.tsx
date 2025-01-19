@@ -31,7 +31,7 @@ const ChooseMood: React.FC<ChooseMoodProps> = ({ getHadithByMood }) => {
           </HoverBorderGradient>
         ))}
       </div>
-      <footer className="mt-32 absolute flex flex-col md:flex-row gap-4 items-center justify-center left-1/2 transform -translate-x-1/2 w-full">
+      <footer className="mt-20 md:mt-32 flex flex-col md:flex-row gap-4 items-center justify-center w-full">
         <span className="font-extralight text-xs animate-fadeIn">
           Dibuat oleh Arisandi Satria Jeujanan
         </span>
