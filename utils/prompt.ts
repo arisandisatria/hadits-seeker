@@ -1,23 +1,23 @@
 export const haditsPrompt = (mood: string) => {
   return `
+Berikan hadits shahih dari salah satu perawi berikut: Abu Daud, Ahmad, Bukhari, Darimi, Ibnu Majah, Malik, Muslim, Nasai, atau Tirmidzi, yang sesuai dengan mood "${mood}".
 
-Berikan hadits shahih dari salah satu perawi berikut: Abu Daud, Ahmad, Bukhari, Darimi, Ibnu Majah, Malik, Muslim, Nasai, atau Tirmidzi, yang sesuai dengan mood "${mood}". Strukturkan hasilnya dengan format berikut:
+Gunakan format berikut tanpa menambahkan keterangan berlebihan:
 
-Teks hadits dalam bahasa Arab.
-Terjemahan hadits ke dalam Bahasa Indonesia.
-Sumber hadits beserta nomor haditsnya (contoh: HR. Bukhari No. 52).
-Penjelasan singkat tentang makna atau konteks hadits.
-Saran yang diberikan harus berupa paragraf, bukan dalam bentuk daftar atau list.
+[Teks hadits dalam bahasa Arab]
+[Terjemahan hadits ke dalam Bahasa Indonesia]
+[Sumber hadits beserta nomor haditsnya]
+[Penjelasan singkat yang relevan dengan mood yang diminta]
 
-Contoh:
+Contoh hasil yang diharapkan:
 
-حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مَسْلَمَةَ قَالَ أَخْبَرَنَا مَالِكٌ عَنْ يَحْيَى بْنِ سَعِيدٍ عَنْ مُحَمَّدِ بْنِ إِبْرَاهِيمَ عَنْ عَلْقَمَةَ بْنِ وَقَّاصٍ عَنْ عُمَرَ
+حدثنا إسماعيل بن إبراهيم، قال: ثنا أبو عوانة، عن عبد الله بن دينار، عن عبد الله بن مسعود، قال: قال رسول الله صلى الله عليه وسلم: "لَوْ أَنِّي أَرَى مَا يُرَى مِنْ آخِرَتِي، لَأَبْكَيْتُ أكْثَرَ مِنْ ضَحْكِي، وَلَكِنْ قَدْ أَتَانِيَ الْيَقِينُ، فَأَصْبَرْتُ عَلَى مَا أَرَى."
 
-Telah menceritakan kepada kami [Abdullah bin Maslamah] berkata, telah mengabarkan kepada kami [Malik] dari [Yahya bin Sa'id] dari [Muhammad bin Ibrahim] dari [Alqamah bin Waqash] dari [Umar], bahwa Rasulullah shallallahu 'alaihi wasallam bersabda: "Semua perbuatan tergantung niatnya..."
+Telah menceritakan kepada kami Ismail bin Ibrahim, berkata: Telah menceritakan kepada kami Abu ‘Uwana, dari Abdullah bin Dinar, dari Abdullah bin Mas’ud, berkata: Rasulullah ﷺ bersabda: "Seandainya aku melihat apa yang dilihat dari akhiratku, niscaya aku akan lebih banyak menangis daripada tertawa, akan tetapi telah datang kepadaku kepastian (yakin), maka aku pun bersabar atas apa yang aku lihat."
 
-HR. Bukhari No. 52
+HR. Bukhari No. 6477
 
-Hadits ini menunjukkan pentingnya niat dalam setiap amal perbuatan.
+Hadits ini menggambarkan kesedihan Nabi Muhammad ﷺ atas keadaan akhirat yang nyata baginya. Keyakinannya membuatnya sabar, meskipun hatinya dipenuhi kerinduan dan kesedihan akan kehidupan setelah mati. Mood "🥺 sedih" mencerminkan perasaan kehilangan dan harapan akan surga yang begitu mendalam.
 
-Dalam menghadapi setiap situasi, niat yang baik harus menjadi landasan utama. Pastikan selalu niatkan semua tindakan kita untuk kebaikan dan demi meraih ridha Allah. Hindari niat yang bersifat duniawi semata, karena niat menentukan hasil di akhirat.`;
+`;
 };
