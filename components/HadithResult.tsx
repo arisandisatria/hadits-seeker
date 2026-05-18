@@ -25,7 +25,7 @@ const HadithResult: React.FC<HadithResultProps> = ({ hadith, setHadith }) => {
         </p>
       </div>
       <div className="flex flex-col space-y-4">
-        <p className="font-light text-base md:text-lg">{hadith?.penjelasan}</p>
+        <p className="font-light text-base md:text-md">{hadith?.penjelasan}</p>
       </div>
 
       <div className="flex gap-20 items-center">
