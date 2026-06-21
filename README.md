@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hadits Seeker 🌙
 
-## Getting Started
 
-First, run the development server:
+Aplikasi pencari dan penjelajah hadits berbasis AI yang dirancang untuk membantu umat Muslim menemukan tuntunan spiritual dengan cara yang lebih personal. Ditenagai oleh **Google Gemini AI**, aplikasi ini memungkinkan pengguna mencari hadits yang relevan berdasarkan *mood* (suasana hati) atau kondisi emosional yang sedang mereka rasakan.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Fitur Utama
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Pencarian Berbasis Mood:** Pengguna cukup memilih atau memasukkan kondisi emosional mereka (misalnya: *sedih, senang, takut, bingung, cinta, marah, cemas, tenang, gelisah*), dan AI akan mencarikan hadits yang paling relevan untuk menenangkan atau memotivasi.
+* **Informasi Rawi Terpercaya:** Menampilkan sanad/periwayat hadits (seperti HR. Bukhari, Muslim, Tirmidzi, dll.) untuk memastikan validitas konten.
+* **Terjemahan Akurat:** Menyediakan teks asli bahasa Arab beserta artinya dalam bahasa Indonesia yang mudah dipahami.
+* **Penjelasan Maksud & Konteks Hadits:** AI memberikan penjelasan mendalam (*syarah* singkat) mengenai maksud, kandungan, dan kontekstualisasi hadits tersebut dalam kehidupan sehari-hari.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Teknologi yang Digunakan
 
-To learn more about Next.js, take a look at the following resources:
+* **AI Engine:** Google Gemini
+* **Frontend/Backend:** Next JS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚙️ Memulai
 
-## Deploy on Vercel
+Sebelum menjalankan proyek ini di lingkungan lokal, pastikan Anda telah menyiapkan:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  Runtime sesuai teknologi yang digunakan (Node.js / Flutter SDK / Python, dll.)
+2.  **Gemini API Key**. Anda bisa mendapatkannya secara gratis melalui [Google AI Studio](https://aistudio.google.com/).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Instalasi
+
+1.  **Clone Repositori**
+    ```bash
+        git clone [https://github.com/username/hadits-seeker.git](https://github.com/username/hadits-seeker.git)
+        cd hadits-seeker
+    ```
+
+2.  **Instal Dependensi**
+    *Sesuaikan dengan stack aplikasi Anda, contoh jika menggunakan Node.js:*
+    ```bash
+        npm install
+    ```
+
+3.  **Konfigurasi Environment**
+    Buat atau edit file `.env` di direktori utama dan masukkan API Key Gemini Anda:
+    ```env
+      NEXT_PUBLIC_API_KEY=api_key_disini
+      POSTGRE_ENDPOINT=url_disini
+      HTTP_ENDPOINT=url_disini
+      XATA_API_KEY=api_key_disini
+    ```
+
+4.  **Jalankan Aplikasi**
+    ```bash
+      npm run dev
+    ```
+
+---
+
+## 💡 Cara Penggunaan
+
+1.  Buka aplikasi **Hadits Seeker**.
+2.  Pilih salah satu *mood* yang tersedia pada layar utama (contoh: **"😟 cemas"**).
+3.  Aplikasi akan memproses input dan menampilkan hadits pilihan yang sesuai dengan kondisi hati Anda.
+4.  Pelajari teks Arab, arti, perawi, serta **Maksud Hadits** yang dijabarkan oleh AI untuk mendapatkan pemahaman yang utuh.
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dilisensikan di bawah **MIT License**.
+
+---
+
+## 🤝 Kontribusi
+
+Jika Anda ingin berkontribusi untuk mengembangkan fitur pencarian yang lebih baik atau melaporkan masalah (*bug*), silakan buka *Issue* atau kirimkan *Pull Request*.
+
+Semoga aplikasi ini dapat menjadi wasilah kebaikan dan penyejuk hati bagi sesama. 🤍
